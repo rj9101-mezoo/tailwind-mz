@@ -1,9 +1,149 @@
 /** @type {import('tailwindcss').Config} */
 
-export default {
-	content: ["../../packages/*/src/**/*.{js,jsx,ts,tsx}", "../../apps/*/src/**/*.{js,jsx,ts,tsx}"],
+module.exports = {
+	content: ['./src/**/*.{html,js,ts}'],
+	mode: 'jit',
 	theme: {
-		extend: {},
+	  extend: {
+		fontSize: {
+		  'display-title': ['2.36rem', { fontWeight: '600' }],
+		  'title-1': ['1.29rem', { fontWeight: '600' }],
+		  'title-2': ['1.14rem', { fontWeight: '600' }],
+		  'title-3': ['1.07rem', { fontWeight: '600' }],
+		  'title-4': ['1rem', { fontWeight: '600' }],
+		  'lg-contents-medium': ['1.28rem', { fontWeight: '500' }],
+		  'lg-contents-regular': ['1.28rem', { fontWeight: '400' }],
+		  'contents2-medium': ['1.07rem', { fontWeight: '500' }],
+		  'contents2-regular': ['1.07rem', { fontWeight: '400' }],
+		  'contents-medium': ['1rem', { fontWeight: '500' }],
+		  'contents-regular': ['1rem', { fontWeight: '400' }],
+		  'sm-contents-medium': ['0.86rem', { fontWeight: '500' }],
+		  'sm-contents-regular': ['0.86rem', { fontWeight: '400' }],
+		  'label-medium': ['0.71rem', { fontWeight: '500' }],
+		  'label-regular': ['0.71rem', { fontWeight: '400' }],
+		  's-medium': ['0.57rem', { fontWeight: '500' }],
+		  's-regular': ['0.57rem', { fontWeight: '500' }],
+		},
+		fontFamily: {
+		  pretendard: ['Pretendard', 'sans-serif'], // Pretendard 폰트 설정
+		},
+		colors: {
+		  gray: {
+			1004: '#5E6070',
+			1003: '#7E808D',
+			1002: '#82869C',
+			1001: '#B2B4BF',
+			1000: '#4C4F60',
+			902: '#22262F',
+			901: '#2D323E',
+			900: '#383F4E',
+			800: '#4F5A5D',
+			700: '#A0A0A0',
+			600: '#A3A3A3',
+			502: '#AFAFAF',
+			501: '#C3C3C3',
+			500: '#CECECE',
+			400: '#D2D2D2',
+			302: '#EBEBEB',
+			301: '#DEDEDE',
+			300: '#E5E5E5',
+			201: '#F2F2F2',
+			200: '#F5F5F5',
+			100: '#FAFAFA',
+		  },
+		  grayblue: {
+			300: '#E7EBEF',
+			202: '#C6C8D5',
+			201: '#D1D3E0',
+			200: '#E9ECF2',
+			100: '#F4F7FA',
+		  },
+		  blue: {
+			801: '#778AB0',
+			800: '#314882',
+			704: '#8EA3CB',
+			703: '#6581B7',
+			702: '#5A79B4',
+			701: '#2C3A80',
+			700: { normal: '#344497', click: '#2C3A80', hover: '#31418F' },
+			602: '#486AAC',
+			601: '#4063A9',
+			600: '#385DA5',
+			502: '#6B80F2',
+			501: '#647AF2',
+			500: '#5E75F1',
+			400: '#82A5EA',
+			300: { normal: '#D3DAEF', overlay: '#517DE726' },
+			200: '#EEF0FB',
+			101: '#EDF0FE',
+			100: '#F6F8FE',
+		  },
+		  edit_color: {
+			blue: 'rgba(223, 251, 255, 0.33)',
+			light_yellow: 'rgba(250, 255, 211, 0.33)',
+			green: 'rgba(231, 255, 224, 0.33)',
+			pink: 'rgba(255, 231, 243, 0.33)',
+			red: 'rgba(255, 220, 220, 0.33)',
+			yellow: '#FFF7EF',
+			puple: '#FAF4FF',
+		  },
+		  yellow: {
+			normal: '#FFF0A4',
+			900: '#FFA800'
+		  },
+		  green: {
+			900: '#45BD43',
+			200: { normal: '#E4F8E6', click: '#D5EDD8', hover: '#C5E4C8' },
+		  },
+		  red: {
+			900: { normal: '#C83616', click: '#AA2E13', hover: '#BE3315', overlay: '#C836160D' },
+			800: { normal: '#E06C6C', click: '#F18888', hover: '#EA7777' },
+			100: { normal: '#FCF1F1', click: '#ECD3D3', hover: '#F8E1E1' },
+		  },
+		  black: {
+			normal: '#000000',
+			300: { overlay: '#00000066' },
+			200: { overlay: '#00000026' },
+			100: { overlay: '#0000000D' },
+		  },
+		  white: {
+			normal: '#FFFFFF',
+			700: { overlay: '#ffffffb3' },
+			400: { overlay: '#FFFFFF66' },
+			100: { overlay: '#FFFFFF1A' },
+		  },
+		  global: {
+			dialog_background: 'rgba(0,0,0,0.1)',
+		  },
+		},
+		boxShadow: {
+		  'crm-table': '2px 2px 11px 0px rgba(0, 0, 0, 0.1)',
+		  'crm-table-hover': '0px 2px 4px 0px rgba(0, 0, 0, 0.08)',
+		  'crm-card': '2px 2px 4px 0px rgba(0, 0, 0, 0.1)',
+		  'crm-card-button': '2px 2px 3px 0px rgba(0, 0, 0, 0.15)',
+		  'crm-filter': '2px 2px 8px 0px rgba(0, 0, 0, 0.1)',
+		  'crm-header-select': '1px 2px 12px 0px rgba(0, 0, 0, 0.1)',
+		  'crm-loading': '1px 1px 9.8px 0px #0000001A',
+		  'crm-create-account': '3px 3px 18px 0px #0000001A',
+		  'data-list-select': '0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12)',
+		  'data-list-card': '2px 2px 12px 0px #0000001A;',
+		  'timeline-dialog': '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+		  'data-list-dialog': '-8px -8px 22px 0px #00000014',
+		  'setting-device-table': '2px 4px 8px 0px #00000026',
+		  'setting-bed-table': '2px 2px 8px 0px #00000026',
+		  'setting-bed-space': '0px 1px 10.2px 0px #0000000D',
+		  'setting-alarm': '12px 8px 14px 0px #0000001A',
+		  'data-list-filter': '1px 1px 4.9px 0px #0000001A',
+		  'report-notice': '2px 2px 9.1px 1px #0000001A'
+		},
+		dropShadow: {
+		  'table-row': '2px 2px 9.9px 0px rgba(0, 0, 0, 0.2)',
+		},
+		gridTemplateRows: {
+		  'autofit': 'repeat(autofit, minmax(0, 1fr))'
+		}
+	  },
+	  plugins: [],
 	},
-	plugins: [],
-};
+  };
+  
