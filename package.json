@@ -1,6 +1,6 @@
 {
   "name": "@rj9101-mezoo/tailwind-mz",
-  "version": "1.0.0",
+  "version": "0.0.15",
   "description": "",
   "main": "tailwind.config.js",
   "files": [
